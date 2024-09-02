@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Favorite Tracks</title>
+</head>
+<body>
+  <h1>Your Favorite Tracks Organized by Category</h1>
+
+  <form th:action="@{/addCategory}" method="post">
+    <label for="categoryName">Add a new category</label>
+    <input type="text" id="categoryName" name="categoryName" required>
+    <button type="submit">Add Category</button>
+  </form>
+
+  <div th:each="category : ${categories}">
+    <h2 th:text="${category.name}">Category Name</h2>
+
+    <ul>
+      <li th:each="track : ${category.tracks}" th:text="${track}">Track Name</li>
+    </ul>
+  </div>
+
+  <ul>
+    <li th:each="track : ${tracks}" th:text="${track}">Track Name</li>
+  </ul>
+  <a th:href="@{/login}">Go back</a>
+
+</body>
+</html>
