@@ -55,6 +55,11 @@
 			<artifactId>spotify-web-api-java</artifactId>
 			<version>6.5.4</version>
 		</dependency>
+		<dependency>
+			<groupId>se.michaelthelin.spotify</groupId>
+			<artifactId>spotify-web-api-java</artifactId>
+			<version>6.5.4</version> <!-- Ensure this version matches the one you need -->
+		</dependency>
 	</dependencies>
 
 	<build>
